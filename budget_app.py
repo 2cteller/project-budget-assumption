@@ -8,6 +8,16 @@ import numpy as np
 from datetime import datetime, date
 from supabase import create_client, Client
 import json
+"""
+Project Budget Assumption — Budget & Cost Tracker
+RelleT Consulting Inc. | Version: 1.0.0
+"""
+import streamlit as st
+import pandas as pd
+import numpy as np
+from datetime import datetime, date
+from supabase import create_client, Client
+import json
 
 st.set_page_config(page_title="Project Budget Assumption — RelleT", page_icon="📈", layout="wide", initial_sidebar_state="expanded")
 
@@ -309,4 +319,6 @@ def main():
     page = render_sidebar()
     {"dashboard":page_dashboard,"reports":page_budget_reports,"invoices":page_invoices,"time_cost":page_time_cost,"scenarios":page_scenarios,"settings":page_settings}[page]()
 
+if __name__ == "__main__":
+    main()
 if __name__ == "__main__": main()
